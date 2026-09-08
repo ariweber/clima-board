@@ -10,15 +10,15 @@ def search_cities(city: str) -> list[dict]:
 
 
 def clean_cities(cities: list[dict]) -> list[dict]:
-    cities = []
+    cities_list = []
     for city in cities:
-        cities.append({
+        cities_list.append({
             "id": city["id"],
             "name": city["name"],
             "country": city.get("country", ""),
-            "latitude": city["latitude "],
+            "latitude": city["latitude"],
             "longitude": city["longitude"],
         })
-    return cities
+    return cities_list
 
 
