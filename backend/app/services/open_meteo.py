@@ -21,4 +21,3 @@ def clean_cities(cities: list[dict]) -> list[dict]:
         })
     return cities
 
-print(search_cities("Berlin"))
