@@ -16,7 +16,7 @@ def clean_cities(cities: list[dict]) -> list[dict]:
             "id": city["id"],
             "name": city["name"],
             "country": city.get("country", ""),
-            "latitude": city["latitude"],
+            "latitude": city["latitude "],
             "longitude": city["longitude"],
         })
     return cities
