@@ -21,3 +21,4 @@ def clean_cities(cities: list[dict]) -> list[dict]:
         })
     return cities
 
+
