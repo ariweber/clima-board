@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from routes.cities_router import router as cities_router
 from routes.weather_router import router as weather_router
+from routes.favorites_router import router as favorites_router
 
 app = FastAPI()
 
@@ -20,3 +21,4 @@ def health():
 
 app.include_router(cities_router)
 app.include_router(weather_router)
+app.include_router(favorites_router)

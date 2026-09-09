@@ -1,11 +1,10 @@
-import requests
+from services.fetch_services import fetch
 
-URL= "https://geocoding-api.open-meteo.com/v1/search"
+CITY_URL= "https://geocoding-api.open-meteo.com/v1/search"
 
 
 def search_cities(city: str) -> list[dict]:
-    response = requests.get(URL, params={"name": city, "count": 10, "language": "en"})
-    data = response.json()
+    data = fetch(CITY_URL, {"name": city, "count": 10, "language": "en"})
     return clean_cities(data.get("results", []))
   
 
