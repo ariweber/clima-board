@@ -40,11 +40,5 @@ def get_days_list(daily: object) -> list[dict]:
         })
     return days_list    
 
-print(get_daily(31.77, 35.22, 3))
-    # https://api.open-meteo.com/v1/forecast?latitude=31.77&longitude=35.22&daily=temperature_2m_max,temperature_2m_min,weather_code&forecast_days=3&timezone=auto
-
-
-
-
         
 
