@@ -34,11 +34,35 @@ def get_days_list(daily: object) -> list[dict]:
     for i in range(len(daily["time"])):
         days_list.append({
             "date": daily["time"][i],
-            "tamp_max": daily["temperature_2m_max"][i],
-            "tamp_min": daily["temperature_2m_min"][i],
+            "temp_max": daily["temperature_2m_max"][i],
+            "temp_min": daily["temperature_2m_min"][i],
             "weather_code": daily["weather_code"][i],           
         })
-    return days_list    
+    return days_list   
 
-        
+
+
+def get_hourly(lat: float, lon: float, hour_count: int) -> list:
+    response = requests.get(CURRENT_URL, params={
+       "latitude": lat,
+       "longitude": lon,
+       "hourly": "temperature_2m,weather_code,wind_speed_10m,apparent_temperature",
+       "forecast_hours": hour_count,
+       "timezone": "auto"
+    })
+    data = response.json()
+    return get_hours_list(data["hourly"])
+
+def get_hours_list(hourly: object) -> list[dict]:
+    hours_list = []
+    for i in range(len(hourly["time"])):
+        hours_list.append({
+            "time": hourly["time"][i],
+            "temperature": hourly["temperature_2m"][i],
+            "wind_speed": hourly["wind_speed_10m"][i],
+            "feels_like": hourly["apparent_temperature"][i],
+            "weather_code": hourly["weather_code"][i],
+        })
+    return hours_list
+
 
