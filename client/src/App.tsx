@@ -12,6 +12,7 @@ import "./App.css";
 export default function App() {
   return (
     <div className="app">
+      <p className="bsd">בס"ד</p>
       <Routes>
         <Route path="/" element={<Welcome />} />
         <Route element={<Layout />}>

@@ -11,7 +11,7 @@
   background-color: rgb(187, 212, 232);
 }
 
-.content {
+.welcome-content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,6 +24,7 @@
   gap: 2rem;
 }
 
+
 .welcome-button {
   padding: 0.5rem 2rem;
   font-size: 1.5rem;
@@ -35,8 +36,3 @@
   cursor: pointer;
 }
 
-.welcome-bsd {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-}

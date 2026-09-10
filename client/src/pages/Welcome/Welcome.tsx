@@ -1,15 +1,24 @@
 import { useState } from "react";
-import { Link } from "react-router";
+import { useNavigate } from "react-router";
 import InputUser from "../../components/InputUser/InputUser";
+import { isValidUserName, saveUserName } from "../../utils/user.utils";
 import "./Welcome.css";
 
 export default function Welcome() {
   const [userName, setUserName] = useState("");
+  const navigate = useNavigate();
+
+  const handleUser = () => {
+    if (!isValidUserName(userName)) {
+      alert("כינוי חייב להכיל לפחות 2 תווים");
+      return;
+    }
+    saveUserName(userName);
+    navigate("/dashboard");
+  };
 
   return (
     <div className="welcome">
-      <p className="welcome-bsd">בס"ד</p>
-
       <header className="welcome-header">
         <h1>ברוכים הבאים לאתר מזג האוויר</h1>
         <p className="welcome-text">
@@ -18,16 +27,11 @@ export default function Welcome() {
         </p>
       </header>
 
-      <main className="content">
+      <main className="welcome-content">
         <InputUser value={userName} onChange={setUserName} />
-
-        <Link
-          to="/dashboard"
-          className="welcome-button"
-          onClick={() => localStorage.setItem("userName", userName)}
-        >
+        <button className="welcome-button" onClick={handleUser}>
           כניסה לאתר
-        </Link>
+        </button>
       </main>
     </div>
   );
