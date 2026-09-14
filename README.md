@@ -38,7 +38,7 @@ python -m venv .venv
 .venv/Scripts/activate      
 pip install -r requirements.txt
 
-cd fronted
+cd frontend
 npm install
 ```
 
@@ -56,7 +56,7 @@ uvicorn main:app --reload
 Frontend:
 
 ```
-cd fronted
+cd frontend
 npm run dev
 ```
 
