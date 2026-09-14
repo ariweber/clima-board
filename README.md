@@ -11,11 +11,11 @@ Weather data comes from Open-Meteo (https://open-meteo.com) .
 
 Python + FastAPI. The routes are:
 
-- `/api/cities` — search a city by name
-- `/api/weather/current` — the weather now
-- `/api/weather/daily` — forecast for the next days
-- `/api/weather/hourly` — forecast for the next hours
-- `/api/favorites` — get, add or delete a favorite city
+- `/api/cities` - search a city by name
+- `/api/weather/current` - the weather now
+- `/api/weather/daily` - forecast for the next days
+- `/api/weather/hourly` - forecast for the next hours
+- `/api/favorites` - get, add or delete a favorite city
 
 
 
@@ -23,19 +23,19 @@ Python + FastAPI. The routes are:
 
 React + TypeScript + Vite. The pages are:
 
-- `/` — welcome, type your name
-- `/dashboard` — hello + the weather in Jerusalem
-- `/search` — search a city
-- `/city/:cityName` — full forecast for one city
-- `/favorites` — your saved cities
-- `/compare` — two cities side by side
+- `/` - welcome, type your name
+- `/dashboard` - hello + the weather in Jerusalem
+- `/search` - search a city
+- `/city/:cityName` - full forecast for one city
+- `/favorites` - your saved cities
+- `/compare` - two cities side by side
 
 
 ## Install
 ```
 cd backend
 python -m venv .venv
-.venv/Scripts/activate        # Windows
+.venv/Scripts/activate      
 pip install -r requirements.txt
 
 cd fronted
@@ -46,7 +46,7 @@ npm install
 
 Open two terminals. Start the backend first.
 
-Backend run it from the `backend/app` :
+Backend run it from the `backend/app`
 
 ```
 cd backend/app
