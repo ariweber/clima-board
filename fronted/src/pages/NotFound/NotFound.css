@@ -1,0 +1,28 @@
+.not-found {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: lightcyan;
+}
+
+.not-found-code {
+  font-size: 5rem;
+  color: steelblue;
+}
+
+.not-found-title {
+  font-size: 1.5rem;
+  color: steelblue;
+}
+
+.not-found-text {
+  margin-bottom: 1rem;
+}
+
+.not-found-link {
+  color: steelblue;
+  font-weight: bold;
+}

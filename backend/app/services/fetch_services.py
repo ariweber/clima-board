@@ -8,7 +8,7 @@ def fetch(url: str, params: dict) -> dict:
     try:
         response = requests.get(url=url, params=params, timeout=10)
     except requests.RequestException:
-        raise HTTPException(502, "Weather service faild")
+        raise HTTPException(502, "Weather service failed")
 
     data = response.json()
     if data.get("error"):

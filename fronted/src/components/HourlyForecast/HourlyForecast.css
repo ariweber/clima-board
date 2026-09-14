@@ -1,0 +1,8 @@
+.hourly-forecast {
+  list-style: none;
+  padding: 0.5rem 0;
+  display: flex;
+  gap: 0.5rem;
+  max-width: 500px;
+  overflow-x: auto;
+}

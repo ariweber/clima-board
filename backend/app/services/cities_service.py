@@ -4,7 +4,7 @@ CITY_URL= "https://geocoding-api.open-meteo.com/v1/search"
 
 
 def search_cities(city: str) -> list[dict]:
-    data = fetch(CITY_URL, {"name": city, "count": 10, "language": "en"})
+    data = fetch(CITY_URL, {"name": city, "count": 10, "language": "he"})
     return clean_cities(data.get("results", []))
   
 
